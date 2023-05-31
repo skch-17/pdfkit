@@ -8,3 +8,4 @@ build/
 coverage
 package-lock.json
 /examples/browserify/bundle.js
+/js/pdfkit.standalone.js

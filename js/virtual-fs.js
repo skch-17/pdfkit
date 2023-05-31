@@ -24,6 +24,9 @@ var VirtualFileSystem = /*#__PURE__*/function () {
   _proto.writeFileSync = function writeFileSync(fileName, content) {
     this.fileData[normalizeFilename(fileName)] = content;
   };
+  _proto.existsSync = function existsSync(fileName) {
+    return this.fileData[fileName];
+  };
   _proto.bindFileData = function bindFileData(data, options) {
     if (data === void 0) {
       data = {};
