@@ -5135,7 +5135,7 @@ var PDFA = {
   },
   endSubset() {
     this._addPdfaMetadata();
-    const jsPath = `${__dirname}/data/sRGB_IEC61966_2_1.icc`;
+    const jsPath = `data/sRGB_IEC61966_2_1.icc`;
     const jestPath = `${__dirname}/../color_profiles/sRGB_IEC61966_2_1.icc`;
     this._addColorOutputIntent(fs.existsSync(jsPath) ? jsPath : jestPath);
   },

@@ -5099,7 +5099,7 @@ var PDFA = {
   },
   endSubset() {
     this._addPdfaMetadata();
-    var jsPath = "".concat(__dirname, "/data/sRGB_IEC61966_2_1.icc");
+    var jsPath = "data/sRGB_IEC61966_2_1.icc";
     var jestPath = "".concat(__dirname, "/../color_profiles/sRGB_IEC61966_2_1.icc");
     this._addColorOutputIntent(fs.existsSync(jsPath) ? jsPath : jestPath);
   },
