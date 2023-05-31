@@ -2658,13 +2658,6 @@ class EmbeddedFont extends PDFFont {
     } else {
       descriptor.data.FontFile2 = fontFile;
     }
-    if (this.document.subset) {
-      var CIDSet = Buffer.from('FFFFFFFFC0', 'hex');
-      var CIDSetRef = this.document.ref();
-      CIDSetRef.write(CIDSet);
-      CIDSetRef.end();
-      descriptor.data.CIDSet = CIDSetRef;
-    }
     descriptor.end();
     var descendantFontData = {
       Type: 'Font',
